@@ -6,5 +6,7 @@
 6. Write separate program that will download data from Firebase and display emails and domains to UI.
 
 Thomas (Thomas-474)
+
 Elion (Lithric)
+
 Ja'Quez (Jinjo-bit)
