@@ -6,7 +6,7 @@ Elion:
 	
 
 Ja'Quez:
-	
+	grab emails using beutiful soup
 
 Thomas:
 	
