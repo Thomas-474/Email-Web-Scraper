@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
-import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js'
+import {getDatabase} from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js'
 
 const firebaseConfig = {
 
@@ -19,16 +19,41 @@ const firebaseConfig = {
 
 };
 
+/**@type {import("@firebase/app").FirebaseApp} */
 const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
-const analytics = getAnalytics(app);
+console.log(database);
 
-console.log(analytics);
-
+/**
+ * 
+ * @param {number} ms the amount of time to sleep for in milliseconds
+ * @returns
+ */
 function sleep(ms) {
     return new Promise((resolve) => {setTimeout(resolve,ms)});
 }
 
+/**
+ * 
+ * @param {function():boolean} cond the condition to check for
+ * @param {number} timeout the max amount of time that can be waited
+ * @returns {Promise<boolean>}
+ */
+async function until(cond,{timeout=3000,delay=100}={}) {
+    var passed = false;
+    var timedOut = false;
+    setTimeout(()=>timedOut = true,timeout);
+    while(!passed && !timedOut) {
+        passed = cond();
+        await sleep(delay);
+    }
+    return passed;
+}
+
 async function test() {
+    await until(()=>document.readyState === 'complete');
     console.log("ok");
 }
+
+test();

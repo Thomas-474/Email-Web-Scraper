@@ -2,8 +2,9 @@ import { createServer, ServerResponse } from 'http';
 import url from 'url';
 import Path from 'path';
 import { readFile, readFileSync } from 'fs';
+// import {getFirestore} from 'firebase/firestore/lite'
 
-var errdir = "C:/Users/oliver_elion/Documents/Working/WebScraper/client"
+var errdir = "C:/Users/oliver_elion/Documents/Working/Email-Web-Scraper/client"
 
 ServerResponse.prototype.writeFile = function(filename = "",type, func = function(){}) {
     type =

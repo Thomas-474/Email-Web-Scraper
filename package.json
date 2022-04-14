@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Thomas-474/Email-Web-Scraper#readme",
   "dependencies": {
     "firebase": "^9.6.10"
+  },
+  "devDependencies": {
+    "@types/firebase": "^3.2.1"
   }
 }
