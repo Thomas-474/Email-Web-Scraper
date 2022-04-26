@@ -1,0 +1,74 @@
+body {
+    background-color: rgb(245, 180, 83);
+}
+
+.centerText {
+    text-align: center;
+}
+
+.centerBlock {
+    margin: auto;
+    display: block;
+}
+
+.centerMargin {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#titleHeader {
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+#enteringUrlDiv {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+#urlHeader {
+    font-size: 22px;
+}
+
+#urlInput {
+    width: 600px;
+}
+
+#urlBtn {
+    margin-top: 20px;
+    height: 30px;
+    width: 100px;
+    background-color: rgb(104, 215, 255);
+}
+
+#recentEmailsDiv {
+    margin-bottom: 70px;
+}
+
+#allEmailsDiv {
+    margin-bottom: 70px;
+}
+
+.emailHeader {
+    font-size: 25px;
+}
+
+.emailTable, .emailTable th, .emailTable td {
+    border-collapse: collapse;
+    border: 2px solid;
+    background-color: rgb(122, 184, 255);
+}
+
+.emailTable th, .emailTable td {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+#resetBtn {
+    margin-top: 20px;
+    height: 30px;
+    width: 70px;
+    background-color: rgb(104, 215, 255);
+}
