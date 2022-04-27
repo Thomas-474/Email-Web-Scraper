@@ -1,0 +1,40 @@
+.invisible {
+    visibility: hidden;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.hidden, .hide {
+    display: none;
+}
+
+
+.centerText {
+    text-align: center;
+}
+
+.centerBlock {
+    margin: auto;
+    display: block;
+}
+
+.centerMargin {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hover-highlight:hover {
+    box-shadow: inset 0 0 100vw 100vh rgb(97, 200, 255);
+    cursor: pointer;
+}

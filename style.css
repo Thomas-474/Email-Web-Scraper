@@ -2,20 +2,6 @@ body {
     background-color: rgb(245, 180, 83);
 }
 
-.centerText {
-    text-align: center;
-}
-
-.centerBlock {
-    margin: auto;
-    display: block;
-}
-
-.centerMargin {
-    margin-right: auto;
-    margin-left: auto;
-}
-
 #titleHeader {
     font-size: 40px;
     margin-top: 40px;

@@ -40,7 +40,11 @@ ServerResponse.prototype.readFile = function(reqUrl,node=false) {
                 reject(err);
             }
             else {
-                this.writeHead(200, {'Content-Type':mime.lookup(node ? "js":reqUrl)});
+                let look = mime.lookup(node ? "js":reqUrl);
+                if (reqUrl.endsWith(".ts")) {
+                    look = "text/javascript";
+                }
+                this.writeHead(200, {'Content-Type':look});
                 resolve(data);
             }
         })
@@ -66,8 +70,21 @@ const server = createServer(async(request, response) => {
         });
         request.on('end', ()=>{
             let returnValue = "ok";
-            console.log(body);
-            if (body === 'app') {
+            let data;
+            try {
+                if(body.includes("{")) {
+                    data = JSON.parse(body);
+                }
+                else {
+                    data = body;
+                }
+            }
+            catch {
+                data = body;
+            }
+            console.log(data);
+
+            if (data === 'app') {
                 returnValue = JSON.stringify(app);
             }
             response.end(returnValue);

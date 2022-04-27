@@ -4,7 +4,9 @@
   "description": "I don't care",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "buildts": "npx tsc --target esnext --moduleResolution node script.ts",
+    "start": "node app.js",
+    "bstart": "npm run buildts && npm start"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
     "mime-types": "^2.1.35"
   },
   "devDependencies": {
-    "@types/firebase": "^3.2.1"
+    "@types/firebase": "^3.2.1",
+    "typescript": "^4.6.3"
   }
 }

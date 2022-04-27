@@ -5,33 +5,35 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Email Web Scraper</title>
+        <link rel="stylesheet" href="style-auto.css">
         <link rel="stylesheet" href="style.css">
-        <script src="node_modules/firebase/firebase-app.js" type="module"></script>
     </head>
     <body>
         <h1 id="titleHeader" class="centerText">Email Web Scraper</h1>
 
-        <div id="enteringUrlDiv">
+        <form action="" method="post" id="enteringUrlDiv">
             <h3 id="urlHeader" class="centerText">Enter URL of website to scrape:</h3>
-            <input id="urlInput" class="centerBlock" type="text">
-            <button id="urlBtn" class="centerBlock">Submit URL</button>
-        </div>
+            <input type="text" id="urlInput" name="urlInput" class="centerBlock">
+            <input type="submit" id="urlBtn" class="centerBlock hover-highlight" value="Submit URL"/>
+        </form>
 
-        <!-- List of recent emails
-        <div id="recentEmailsDiv">
-            <h3 class="emailHeader centerText">Emails:</h3>
-            <table class="emailTable centerMargin">
-                <tr>
-                    <th>URL</th>
-                    <th>Email</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-            <button id="resetBtn" class="centerBlock">Reset</button>
-        </div> -->
+        <span class="inline hidden">
+            List of recent emails
+            <div id="recentEmailsDiv">
+                <h3 class="emailHeader centerText">Emails:</h3>
+                <table class="emailTable centerMargin">
+                    <tr>
+                        <th>URL</th>
+                        <th>Email</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <button id="resetBtn" class="centerBlock">Reset</button>
+            </div>
+        </span>
 
         <div id="allEmailsDiv">
             <h3 class="emailHeader centerText">All Emails:</h3>
@@ -46,7 +48,6 @@
                 </tr>
             </table>
         </div>
-        <script src="utils.js" type="module"></script>
         <script src="script.js" type="module"></script>
     </body>
 </html>
